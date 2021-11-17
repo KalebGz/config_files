@@ -30,7 +30,11 @@ source /Users/kaleb/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Custom Commands
-source ~/.zsh_custom_commands.sh
+# source ~/.zsh_custom_commands.sh
+
+
+# Source github commands 
+source ~/config_files/.zsh_custom_commands.sh
 # Z extension for browsing
 # . ~/.z.shexport OPENSSL_ROOT_DIR=/usr/local/opt/openssl@1.1
 
