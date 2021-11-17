@@ -4,7 +4,7 @@ mcd(){
     cd -P -- "$1"
 }
 
-# Commands for Flatiron
+      # Commands for Flatiron
 # Opens up a flatiron directory
 # cdf(){
 #   cd ~
@@ -19,6 +19,7 @@ mcd(){
 #   Code -r .
 # }
 
+      #  Custom git commands
 gitam() {
   git add .
   git commit -m "$1"
@@ -35,6 +36,18 @@ gitcreate() {
   # curl -u 'kalebgz' https://api.github.com/user/repos -d '{"name":"repository name"}'
   # git push -u origin HEAD
 }
+
+
+gitcreatepriv()
+{
+  curl -u 'username' https://api.github.com/user/repos -d '{"name":"$1", "private":"true"}'
+  cd "$1"
+  git init
+  git remote add origin git@github.com:KalebGz/"$1".git
+  git branch -M main
+  git push -u origin main
+}
+
 
 # Runs set of commands for pushing local directory to a remote repo on github
 # gitpush() {
