@@ -38,7 +38,7 @@ gitcreate() {
 }
 
 
-gitcreatepriv()
+gitcreatep)
 {
   curl -u 'username' https://api.github.com/user/repos -d '{"name":"$1", "private":"true"}'
   cd "$1"
