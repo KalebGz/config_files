@@ -1,25 +1,14 @@
-# # Makes a directory 
+#-------------------------------- Unix Shortcuts -------------------------------- #
+
+# create and cd into new dir
 mcd(){
     mkdir -p -- "$1" &&
     cd -P -- "$1"
 }
 
-      # Commands for Flatiron
-# Opens up a flatiron directory
-# cdf(){
-#   cd ~
-#   cd -- "Flatiron/code/$1"
-# }
 
-# # # Clones a github repo and opens VS code inside the local dir
-# gclone() {
-#   cdf labs
-#   git clone "$1" && cd "$(basename "$1" .git)"
-#   bundle install
-#   Code -r .
-# }
 
-      #  Custom git commands
+#-------------------------------- GITHUB CUSTOM COMMANDS -------------------------------- #
 gitam() {
   git add .
   git commit -m "$1"
@@ -50,9 +39,27 @@ gitcreatep()
 }
 
 
-# Runs set of commands for pushing local directory to a remote repo on github
-# gitpush() {
-#   git remote add origin https://github.com/KalebGz/"$1".git
-#   git branch -M main
-#   git push -u origin main
-#   }
+# push an existing repository from the command line
+gitaddrem() {
+  git remote add origin "$1"
+  git branch -M main
+  git push -u origin main
+}
+
+
+#-------------------------------- OLD CUSTOM COMMANDS --------------------------------#
+
+      # Commands for Flatiron
+# Opens up a flatiron directory
+# cdf(){
+#   cd ~
+#   cd -- "Flatiron/code/$1"
+# }
+
+# # # Clones a github repo and opens VS code inside the local dir
+# gclone() {
+#   cdf labs
+#   git clone "$1" && cd "$(basename "$1" .git)"
+#   bundle install
+#   Code -r .
+# }
