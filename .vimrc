@@ -16,4 +16,4 @@ filetype plugin indent on
 autocmd vimenter * NERDTree
 "Open terminal below"
 cabbrev bterm bo term
-set termsize=10x0
+
