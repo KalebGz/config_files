@@ -1,0 +1,26 @@
+instructions for remoting remapping control + windows keys(using an apple keyboard on linux machine)
+
+1. open xmodmap
+code ~/.Xmodmap 
+2. Copy remapping code into file
+### 
+clear control
+clear mod4
+
+keycode 105 =
+keycode 206 =
+
+keycode 133 = Control_L NoSymbol Control_L
+keycode 134 = Control_R NoSymbol Control_R
+keycode 37 = Super_L NoSymbol Super_L
+
+add control = Control_L
+add control = Control_R
+add mod4 = Super_L
+
+3. Copy this code into the file
+xmodmap ~/.Xmodmap  do actual mapping
+
+
+0. undo mapping
+setxkbmap -option 
