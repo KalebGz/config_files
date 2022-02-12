@@ -15,4 +15,4 @@ TODO: make this work for bash
 instructions for updating vim
 1. just copy paste it lol
 
-save creds: git config --global credential.helper store
+save creds: `git config --global credential.helper store`
