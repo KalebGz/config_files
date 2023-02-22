@@ -25,11 +25,16 @@ gitam() {
   git commit -m "$1"
 }
 
+cdgit() {
+  cd /Users/kaleb/Git_Repos/
+}
+
 gitcreate() {
   # gitam "intial commit"
-  curl -u 'username' https://api.github.com/user/repos -d '{"name":"$1"}'
-  cd "$1"
+  curl -u 'kalebgz' https://api.github.com/user/repos -d '{"name":"$1"}'
+  mcd "$1"
   git init
+  git am "initial commit"
   git remote add origin git@github.com:KalebGz/"$1".git
   git branch -M main
   git push -u origin main
@@ -40,7 +45,7 @@ gitcreate() {
 
 gitcreatepriv()
 {
-  curl -u 'username' https://api.github.com/user/repos -d '{"name":"$1", "private":"true"}'
+  curl -u 'kalebgz' https://api.github.com/user/repos -d '{"name":"$1", "private":"true"}'
   cd "$1"
   git init
   git remote add origin git@github.com:KalebGz/"$1".git
