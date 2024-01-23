@@ -1,18 +1,13 @@
 # config_files
 
-- Config files for shell shortcuts and vim configurations
-
-
-instructions for using bash shortcuts
+##custom commands
 1. Clone this file into root directory
-2. add this line to your zshrc
+2. add this line into .zshrc(.bashrc if using bash)
 `source ~/config_files/.zsh_custom_commands.sh`
-3. happy days 
-
-TODO: make this work for bash 
 
 
-instructions for updating vim
-1. just copy paste it lol
+## ubuntu key reamapping
+--
 
-save creds: `git config --global credential.helper store`
+## windows key remapping
+- Just use powertoys to remap cmd and ctrl keys
