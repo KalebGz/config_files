@@ -25,6 +25,11 @@ gitam() {
   git commit -m "$1"
 }
 
+gitamp() {
+  git add .
+  git commit -m "$1"
+}
+
 cdgit() {
   cd /Users/kaleb/Git_Repos/
 }
