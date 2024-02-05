@@ -54,7 +54,7 @@ gitcreatepriv()
 #                       #
 #         Jekyll        #
 #                       #
-bundleweb() {
+bunweb() {
   bundle exec jekyll serve
 }
 
