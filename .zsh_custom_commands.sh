@@ -26,6 +26,7 @@ cdgit() {
   cd /Users/kaleb/Git_Repos/
 }
 
+# create remote repo
 gitcreate() {
   # gitam "intial commit"
   curl -u 'kalebgz' https://api.github.com/user/repos -d '{"name":"$1"}'
@@ -39,6 +40,7 @@ gitcreate() {
   # git push -u origin HEAD
 }
 
+# create remote private repo
 gitcreatepriv()
 {
   curl -u 'kalebgz' https://api.github.com/user/repos -d '{"name":"$1", "private":"true"}'
@@ -69,7 +71,7 @@ bundleweb() {
 #   }
 
 
-      # Commands for Flatiron
+### Flatiron
 # Opens up a flatiron directory
 # cdf(){
 #   cd ~
