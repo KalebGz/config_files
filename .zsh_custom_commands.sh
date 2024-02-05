@@ -1,25 +1,16 @@
-# # Makes a directory 
+#                       #
+#         UNIX          #
+#                       #
+
+# Makes a directory 
 mcd(){
     mkdir -p -- "$1" &&
     cd -P -- "$1"
 }
 
-      # Commands for Flatiron
-# Opens up a flatiron directory
-# cdf(){
-#   cd ~
-#   cd -- "Flatiron/code/$1"
-# }
-
-# # # Clones a github repo and opens VS code inside the local dir
-# gclone() {
-#   cdf labs
-#   git clone "$1" && cd "$(basename "$1" .git)"
-#   bundle install
-#   Code -r .
-# }
-
-      #  Custom git commands
+#                       #
+#  Custom git commands  #
+#                       #
 gitam() {
   git add .
   git commit -m "$1"
@@ -28,6 +19,7 @@ gitam() {
 gitamp() {
   git add .
   git commit -m "$1"
+  git push
 }
 
 cdgit() {
@@ -47,7 +39,6 @@ gitcreate() {
   # git push -u origin HEAD
 }
 
-
 gitcreatepriv()
 {
   curl -u 'kalebgz' https://api.github.com/user/repos -d '{"name":"$1", "private":"true"}'
@@ -58,6 +49,17 @@ gitcreatepriv()
   git push -u origin main
 }
 
+#                       #
+#         Jekyll        #
+#                       #
+bundleweb() {
+  bundle exec jekyll serve
+}
+
+
+#                       #
+#         Scrap         #
+#                       #
 
 # Runs set of commands for pushing local directory to a remote repo on github
 # gitpush() {
@@ -65,3 +67,19 @@ gitcreatepriv()
 #   git branch -M main
 #   git push -u origin main
 #   }
+
+
+      # Commands for Flatiron
+# Opens up a flatiron directory
+# cdf(){
+#   cd ~
+#   cd -- "Flatiron/code/$1"
+# }
+
+# # # Clones a github repo and opens VS code inside the local dir
+# gclone() {
+#   cdf labs
+#   git clone "$1" && cd "$(basename "$1" .git)"
+#   bundle install
+#   Code -r .
+# }
