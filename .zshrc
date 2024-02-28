@@ -34,7 +34,7 @@ source /Users/kaleb/.powerlevel10k/powerlevel10k.zsh-theme
 
 
 # Source github commands 
-source ~/config_files/.zsh_custom_commands.sh
+source ~/Git_Repos/config_files/.zsh_custom_commands.sh
 # Z extension for browsing
 # . ~/.z.shexport OPENSSL_ROOT_DIR=/usr/local/opt/openssl@1.1
 
